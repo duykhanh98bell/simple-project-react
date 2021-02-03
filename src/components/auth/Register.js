@@ -58,9 +58,9 @@ export const Register = (props) => {
             <td>{value.role}</td>
             <td>{value.loginfirst ? 'true' : 'false'}</td>
             <td>
-              <div type='button' className='btn btn-warning'>
+              {/* <div type='button' className='btn btn-warning'>
                 Sửa
-              </div>
+              </div> */}
               <div
                 type='button'
                 className='btn btn-danger'
@@ -133,7 +133,7 @@ export const Register = (props) => {
               <button type='submit' className='btn btn-primary'>
                 Register
               </button>
-              <div className='btn btn-warning'>Close</div>
+              {/* <div className='btn btn-warning'>Close</div> */}
             </div>
           </div>
         </form>
