@@ -1,0 +1,79 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[` 1`] = `
+<div
+  className="body"
+>
+  <div
+    className="wrapperr"
+  >
+    <div
+      className="title"
+    >
+      Login Form
+    </div>
+    <form
+      onSubmit={[Function]}
+    >
+      <div
+        className="field"
+      >
+        <input
+          name="username"
+          onChange={[Function]}
+          required={true}
+          type="text"
+        />
+        <label>
+          Username
+        </label>
+      </div>
+      <div
+        className="field"
+      >
+        <input
+          name="password"
+          onChange={[Function]}
+          required={true}
+          type="password"
+        />
+        <label>
+          Password
+        </label>
+      </div>
+      <div
+        className="content"
+      >
+        <div
+          className="checkbox"
+        >
+          <input
+            id="remember-me"
+            type="checkbox"
+          />
+          <div
+            htmlFor="remember-me"
+          >
+            Remember me
+          </div>
+        </div>
+        <div
+          className="pass-link"
+        >
+          <div>
+            Forgot password?
+          </div>
+        </div>
+      </div>
+      <div
+        className="field"
+      >
+        <input
+          defaultValue="Login"
+          type="submit"
+        />
+      </div>
+    </form>
+  </div>
+</div>
+`;

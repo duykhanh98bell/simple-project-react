@@ -15,8 +15,15 @@ export const Login = (props) => {
         <div className='title'>Login Form</div>
         <form onSubmit={onSubmit}>
           <div className='field'>
-            <input name='username' type='text' required onChange={onChange} />
-            <label>Username</label>
+            <input
+              id='username'
+              name='username'
+              type='text'
+              required
+              onChange={onChange}
+              data-testid='username'
+            />
+            <label htmlFor='username'>Username</label>
           </div>
           <div className='field'>
             <input
@@ -24,8 +31,10 @@ export const Login = (props) => {
               type='password'
               required
               onChange={onChange}
+              data-testid='password'
+              id='password'
             />
-            <label>Password</label>
+            <label htmlFor='password'>Password</label>
           </div>
           <div className='content'>
             <div className='checkbox'>
@@ -37,11 +46,8 @@ export const Login = (props) => {
             </div>
           </div>
           <div className='field'>
-            <input type='submit' defaultValue='Login' />
+            <input type='submit' defaultValue='Login' data-testid='log' />
           </div>
-          {/* <div className='signup-link'>
-          Not a member? <a href='./register.html'>Signup now</a>
-        </div> */}
         </form>
       </div>
     </div>

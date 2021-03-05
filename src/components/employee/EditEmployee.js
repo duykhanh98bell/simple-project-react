@@ -21,7 +21,7 @@ export const EditEmployee = (props) => {
   const onSubmit = (event) => {
     event.preventDefault();
     props.dataEditEmployee(state, filename);
-    props.offTask();
+    props.offTask(0);
   };
 
   const renderOption = () => {
@@ -96,7 +96,7 @@ export const EditEmployee = (props) => {
                   <input
                     type='file'
                     className='custom-file-input'
-                    id='inputGroupFile01'
+                    id='photo'
                     aria-describedby='inputGroupFileAddon01'
                     name='photo'
                     onChange={(e) => {

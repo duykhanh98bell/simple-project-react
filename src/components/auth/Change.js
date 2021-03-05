@@ -24,8 +24,9 @@ export const Change = (props) => {
               name='password'
               required
               onChange={onChange}
+              id='password'
             />
-            <label>Password</label>
+            <label htmlFor='password'>Password</label>
           </div>
           <div className='field'>
             <input
@@ -33,8 +34,9 @@ export const Change = (props) => {
               name='newpassword'
               required
               onChange={onChange}
+              id='newPassword'
             />
-            <label>New Password</label>
+            <label htmlFor='newPassword'>New Password</label>
           </div>
           <div className='field'>
             <input
@@ -42,8 +44,9 @@ export const Change = (props) => {
               name='repassword'
               required
               onChange={onChange}
+              id='rePassword'
             />
-            <label>Re Password</label>
+            <label htmlFor='rePassword'>Re Password</label>
           </div>
           <div className='content'>
             <div className='checkbox'>
@@ -55,7 +58,7 @@ export const Change = (props) => {
             </div>
           </div>
           <div className='field'>
-            <input type='submit' defaultValue='Login' />
+            <input type='submit' defaultValue='Login' data-testid='change' />
           </div>
           {/* <div className='signup-link'>
             Not a member? <a href='./register.html'>Signup now</a>

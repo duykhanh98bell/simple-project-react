@@ -38,6 +38,7 @@ export const EditDepartment = (props) => {
             type='hidden'
             value={department.id}
             onChange={handleChange}
+            data-testid='hiddenId'
           />
           <div className='form-group row'>
             <div className='col-sm-5'>

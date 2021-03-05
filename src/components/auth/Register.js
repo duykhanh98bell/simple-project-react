@@ -47,6 +47,29 @@ export const Register = (props) => {
       .then(() => getUsers().then((res) => setList(res)))
       .catch((err) => err);
   };
+  const checkUser = (value) => {
+    if (localStorage.getItem('username') === value.username) {
+      return (
+        <td>
+          <div type='button' className='btn btn-success'>
+            Hello
+          </div>
+        </td>
+      );
+    } else {
+      return (
+        <td>
+          <div
+            type='button'
+            className='btn btn-danger'
+            onClick={() => onDelete(value._id)}
+          >
+            Xóa
+          </div>
+        </td>
+      );
+    }
+  };
   const loopUsers = () => {
     if (list !== null) {
       return list.map((value, index) => {
@@ -56,19 +79,8 @@ export const Register = (props) => {
             <td>{value.username}</td>
             <td>{value.email}</td>
             <td>{value.role}</td>
-            <td>{value.loginfirst ? 'true' : 'false'}</td>
-            <td>
-              {/* <div type='button' className='btn btn-warning'>
-                Sửa
-              </div> */}
-              <div
-                type='button'
-                className='btn btn-danger'
-                onClick={() => onDelete(value._id)}
-              >
-                Xóa
-              </div>
-            </td>
+            <td>{value.loginfirst ? 'Rồi' : 'Chưa'}</td>
+            {checkUser(value)}
           </tr>
         );
       });
@@ -82,7 +94,7 @@ export const Register = (props) => {
           <div className='form-group row'>
             <div className='col-sm-5'>
               <div className='form-group row'>
-                <label htmlFor='name' className='col-lg-3 col-form-label'>
+                <label htmlFor='username' className='col-lg-3 col-form-label'>
                   Username
                 </label>
                 <div className='col-lg-9'>
@@ -90,16 +102,13 @@ export const Register = (props) => {
                     name='username'
                     type='text'
                     className='form-control'
-                    id='name'
+                    id='username'
                     onChange={onChange}
                   />
                 </div>
               </div>
               <div className='form-group row'>
-                <label
-                  htmlFor='officephone'
-                  className='col-lg-3 col-form-label'
-                >
+                <label htmlFor='email' className='col-lg-3 col-form-label'>
                   Email
                 </label>
                 <div className='col-lg-9'>
@@ -107,13 +116,13 @@ export const Register = (props) => {
                     name='email'
                     type='email'
                     className='form-control'
-                    id='officephone'
+                    id='email'
                     onChange={onChange}
                   />
                 </div>
               </div>
               <div className='form-group row'>
-                <label htmlFor='manager' className='col-lg-3 col-form-label'>
+                <label htmlFor='role' className='col-lg-3 col-form-label'>
                   Role
                 </label>
                 <div className='col-lg-9'>
@@ -121,7 +130,7 @@ export const Register = (props) => {
                     name='role'
                     type='text'
                     className='form-control'
-                    id='manager'
+                    id='role'
                     onChange={onChange}
                   />
                 </div>

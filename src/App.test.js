@@ -1,8 +1,12 @@
+import { create, act } from 'react-test-renderer';
+import { renderHook } from '@testing-library/react-hooks';
+import Home from './components/Home';
 import { render, screen } from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+describe('home', () => {
+  it('render home', () => {
+    const { getAllByText, getByText, getByTestId, container } = render(<App />);
+    screen.debug();
+  });
 });
